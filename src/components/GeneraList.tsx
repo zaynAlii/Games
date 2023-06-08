@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Image from 'next/image';
 import data from '@/app/fetchData/page'
 type tDaata =
     {
@@ -39,7 +40,13 @@ export const GeneraList = ({setgenreid,returnnamee}:{setgenreid:any,returnnamee:
                       onClick={()=>{setActive(index); setgenreid(ele.id); returnnamee(ele.name)}}
                     className={`flex items-center gap-3  hover:bg-gray-500  p-3  group rounded-lg ${activeIndex===index?'bg-gray-500 text-black font-bold  ':null} `}>
                         
-                            <img key={index+1} src={ele.image_background} alt="img" className={`ml-14 w-10  h-10 object-cover rounded-lg group-hover:scale-125
+                            <img
+                            key={index+1} 
+                            src={ele.image_background} 
+                            alt="img" 
+                            width={400}
+                            height={400}
+                            className={`ml-14 w-10  h-10 object-cover rounded-lg group-hover:scale-125
                             transition-all ease-out duration-500   ${activeIndex===index?'scale-150     ':null}`} />
                         
                         <h4  key={index+2} className={` group-hover:font-bold transition-all ease-out duration-300  ${activeIndex===index?'font-bold text-xl text-cyan-300     ':null}`}> {ele.name} </h4>

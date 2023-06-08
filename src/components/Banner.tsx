@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Image from 'next/image'
 export const Banner = ({ gameB }: { gameB: any }) => {
   return (
     <div className=' w-auto relative'>
@@ -11,7 +11,11 @@ export const Banner = ({ gameB }: { gameB: any }) => {
         <button className='bg-blue-300 font-bold text-xl p-2 hover:bg-blue-600 transition-all ease-out duration-500 rounded-lg '>Get one</button>
 
       </div>
-      <img src={gameB.background_image} alt="img" className=' h-[450px]    w-full  object-cover rounded-lg border' />
+      <img src={gameB.background_image}
+       alt="img" className=' h-[450px]    w-full  object-cover rounded-lg border'
+       width={400}
+       height={400}
+       />
     </div>
   )
 }

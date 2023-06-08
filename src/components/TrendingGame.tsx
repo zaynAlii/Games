@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Image from 'next/image'
 
 export const TrendingGame = ({ games }: { games: any }) => {
 
@@ -11,8 +11,13 @@ export const TrendingGame = ({ games }: { games: any }) => {
           
             {games.map((items: any, index: number) => index < 4 && (
                 
-                <div className='border-l-4 border-b-2 group cursor-pointer   p-2  border-cyan-400  mx-2 rounded-lg   text-center'>
-                    <img className='object-cover group-hover:scale-105  transition-all ease-out duration-300  h-[300px]' src={items.background_image} alt={items.name} />
+                <div key={index} className='border-l-4 border-b-2 group cursor-pointer   p-2  border-cyan-400  mx-2 rounded-lg   text-center'>
+                    <img
+                    className='object-cover group-hover:scale-105  transition-all ease-out duration-300  h-[300px]' 
+                    src={items.background_image} alt={items.name} 
+                    width={400}
+                    height={400}
+                    />
                     <h3 className='group-hover:mt-2 transition-all ease-out duration-300'>{items.name}</h3>
                 </div>
             ))}
