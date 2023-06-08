@@ -1,5 +1,5 @@
 import React from 'react'
-import { DEFAULT_MAX_VERSION } from 'tls'
+
 
 export const TrendingGame = ({ games }: { games: any }) => {
 

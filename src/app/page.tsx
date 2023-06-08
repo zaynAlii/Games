@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { GeneraList } from '@/components/GeneraList';
 import Data from './fetchData/page';
 import { dataGames } from '@/app/fetchData/page'
-import { GamesShow } from '@/components/GamesShow';
 import { Banner } from '@/components/Banner';
 import { GiCrystalBars } from 'react-icons/Gi'
 import { TrendingGame } from '@/components/TrendingGame';
