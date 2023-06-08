@@ -1,12 +1,6 @@
 import React, { use, useEffect, useState } from 'react'
 // import {IoIosArrowForward} from 'react-icons/IO';
 export const PopulerGames = ({gamebyGenre,printName}:{gamebyGenre:any,printName:string}) => {
-      useEffect(()=>{
-      
-        console.log(gamebyGenre);
-      },[])
-
-
       const [Tval,setTval]=useState("0");
       function nextTrans(){
         if (Tval==="0") {
