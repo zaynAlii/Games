@@ -56,7 +56,7 @@ export default function Home() {
   const setname = (name: string) => {
     setName(name);
   }
-  const getGamesbyGenreID = (id: number = 4) => {
+  const getGamesbyGenreID = (id:number= 4) => {
     dataGamesbyGenre(id).then(data => setgamelistbyGenreId(data))
   }
   return (

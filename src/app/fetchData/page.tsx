@@ -39,11 +39,13 @@ const dataGames = async () => {
 
 
 
-async function dataGamesbyGenre(id: number): Promise<ok[]> {
+async function dataGamesbyGenre(id:number): Promise<any> {
   const key = 'e287d9764c014a92b46deccf1a1cb6c4';
   const fResponse = await fetch(`https://api.rawg.io/api/games?key=${key}&genres=${id}`);
   const response = await fResponse.json();
   const results = response.results as ok[];
+  // console.log(typeof results );
+  // console.log(results);
   return results;
 }
 
